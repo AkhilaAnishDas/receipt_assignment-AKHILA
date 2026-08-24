@@ -1,47 +1,5 @@
 \q
-CREATE database collegedb
-\c collegedb
-CREATE database collegedb;
-\c collegedb
-CREATE TABLE students (
-student_id INT PRIMARY KEY,
-roll_no VARCHAR(20),
-name VARCHAR(50),
-department VARCHAR(20),
-marks INT
-);
-INSERT INTO students VALUES
-(1, 'CSE101', 'Riya', 'CSE', 85),
-(2, 'CSE102', 'Arjun', 'CSE', 72),
-(3, 'ECE101', 'Fatima', 'ECE', 90),
-(4, 'CSE103', 'Karan', 'CSE', 78);
-CREATE TABLE subjects (
-subject_id INT PRIMARY KEY,
-subject_code VARCHAR(20),
-subject_name VARCHAR(100)
-);
-INSERT INTO subjects VALUES
-(101, 'DBMS', 'Database Management System'),
-(102, 'CN', 'Computer Networks'),
-(103, 'OS', 'Operating Systems');
-CREATE TABLE student_subject (
-student_id INT,
-subject_id INT,
-marks INT,
-PRIMARY KEY (student_id, subject_id),
-FOREIGN KEY (student_id)
-REFERENCES students(student_id),
-FOREIGN KEY (subject_id)
-REFERENCES subjects(subject_id)
-);
-INSERT INTO student_subject VALUES
-(1, 101, 85);
-\dt subjects
-select * from student;
-select * from students;
-select * from subjects;
-select * from student_subject;
-CREATE DATABASE receipt_assignment;
+CREATE DATABASE receipt_assignment
 \c receipt_assignment
 CREATE TABLE store (
     store_id SERIAL PRIMARY KEY,
@@ -130,5 +88,5 @@ JOIN store s
 JOIN receipt_item ri
     ON r.receipt_id = ri.receipt_id
 ORDER BY ri.line_no;
-\o receipt_assignment_output.txt
+
 \s receipt_assignment.sql

@@ -1,6 +1,7 @@
 \q
 CREATE DATABASE receipt_assignment
 \c receipt_assignment
+    
 CREATE TABLE store (
     store_id SERIAL PRIMARY KEY,
     store_name VARCHAR(100) NOT NULL,
@@ -10,6 +11,7 @@ CREATE TABLE store (
     address TEXT,
     phone VARCHAR(15)
 );
+
 CREATE TABLE receipt (
     receipt_id SERIAL PRIMARY KEY,
     bill_no VARCHAR(30) UNIQUE NOT NULL,
@@ -20,6 +22,7 @@ CREATE TABLE receipt (
     payment_method VARCHAR(30),
     total_amount NUMERIC(10,2)
 );
+
 CREATE TABLE receipt_item (
     receipt_item_id SERIAL PRIMARY KEY,
     receipt_id INT NOT NULL REFERENCES receipt(receipt_id),
@@ -31,10 +34,15 @@ CREATE TABLE receipt_item (
     value NUMERIC(10,2),
     UNIQUE(receipt_id, line_no)
 );
+
 \dt
+    
 \d store
+    
 \d receipt
+    
 \d receipt_item
+    
 INSERT INTO store
 (store_name, gstin, cin, fssai_no, address, phone)
 VALUES
@@ -46,6 +54,7 @@ VALUES
     'PLOT NO. 18, SECTOR 15, CBD BELAPUR, NAVI MUMBAI - 400614',
     '8655429200'
 );
+
 INSERT INTO receipt
 (bill_no, voucher_no, store_id, bill_datetime, cashier, payment_method, total_amount)
 VALUES
@@ -58,6 +67,7 @@ VALUES
     'Card Payment',
     969.50
 );
+
 INSERT INTO receipt_item
 (receipt_id, line_no, hsn, particular, quantity, rate, value)
 VALUES
@@ -70,10 +80,11 @@ VALUES
 (1, 7, '420222', 'GIRLS WALLET PRINT', 1, 129.00, 129.00),
 (1, 8, '732410', 'SS SINK STRAINER-nos', 1, 69.00, 69.00),
 (1, 9, '220210', 'LIMCA BOTTLE-750ml', 1, 35.00, 35.00);
+
 SELECT * FROM store;
 SELECT * FROM receipt;
 SELECT * FROM receipt_item;
-SELECT * FROM <table>;
+
 SELECT
     r.bill_no,
     s.store_name,

@@ -40,7 +40,7 @@ The database was implemented and tested using **PostgreSQL**.
 The original receipt used for this assignment is shown below.
 
 <p align="center">
-  <img src="./screenshotzzz/BILL-OG.png" alt="Original D-Mart Receipt" width="700">
+  <img src="./screenshotzzz/BILL-OG.png" alt="Original D-Mart Receipt" width="500">
 </p>
 
 ### Receipt Details
@@ -207,7 +207,7 @@ A **Candidate Key** is a column or combination of columns that could uniquely id
 The main PostgreSQL database was created before implementing the tables.
 
 <p align="center">
-  <img src="./screenshotzzz/CREATE-DB.png" alt="Creating PostgreSQL Database" width="850">
+  <img src="./screenshotzzz/CREATE-DB.png" alt="Creating PostgreSQL Database" width="870">
 </p>
 
 ---
@@ -225,7 +225,7 @@ receipt_item
 The tables include appropriate **Primary Key, Foreign Key and UNIQUE constraints**.
 
 <p align="center">
-  <img src="./screenshotzzz/CREATE-TB.png" alt="Creating Database Tables" width="850">
+  <img src="./screenshotzzz/CREATE-TB.png" alt="Creating Database Tables" width="870">
 </p>
 
 ---
@@ -235,7 +235,7 @@ The tables include appropriate **Primary Key, Foreign Key and UNIQUE constraints
 The actual data obtained from the D-Mart receipt was inserted into the three tables.
 
 <p align="center">
-  <img src="./screenshotzzz/INSERT-VL.png" alt="Inserting Receipt Values" width="850">
+  <img src="./screenshotzzz/INSERT-VL.png" alt="Inserting Receipt Values" width="870">
 </p>
 
 ---
@@ -245,7 +245,7 @@ The actual data obtained from the D-Mart receipt was inserted into the three tab
 The inserted records were retrieved from the three tables to verify that the data was stored correctly.
 
 <p align="center">
-  <img src="./screenshotzzz/SHOW-VL-TB.png" alt="Inserted Values in Database Tables" width="850">
+  <img src="./screenshotzzz/SHOW-VL-TB.png" alt="Inserted Values in Database Tables" width="870">
 </p>
 
 ---
@@ -255,7 +255,7 @@ The inserted records were retrieved from the three tables to verify that the dat
 The database structure and relationships between the Primary Keys, Foreign Keys and Candidate Keys were checked.
 
 <p align="center">
-  <img src="./screenshotzzz/SHOW-KEY-RL.png" alt="Database Keys and Relationships" width="850">
+  <img src="./screenshotzzz/SHOW-KEY-RL.png" alt="Database Keys and Relationships" width="870">
 </p>
 
 

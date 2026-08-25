@@ -39,9 +39,7 @@ The database was implemented and tested using **PostgreSQL**.
 
 The original receipt used for this assignment is shown below.
 
-<p align="center">
-  <img src="./screenshotzzz/BILL-OG.png" alt="Original D-Mart Receipt" width="500">
-</p>
+<img src="./screenshotzzz/BILL-OG.png" alt="Original D-Mart Receipt" width="300">
 
 ### Receipt Details
 
